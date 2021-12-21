@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ParkingInfoScreen"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@mipmap/ic_launcher_foreground"
+        android:contentDescription="@string/todo"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="Check Out"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_25ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textStyle="bold"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_15sdp"
+            android:background="@drawable/yellow_border"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/parking_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15ssp"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_20sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Time : "
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/current_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/green"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration : "
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment : "
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@color/gray"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check out"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/yellow"
+        android:textStyle="bold"
+        android:onClick="CheckOut"/>
+
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SignUpScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="SIGN UP"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_30ssp"
+            android:textAllCaps="true"
+            android:transitionName="sloganText"
+            tools:targetApi="lollipop" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/regName"
+                android:hint="Enter Name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:transitionName="usernameTran"
+                    tools:targetApi="lollipop" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/regPhone"
+                android:hint="Phone No"
+                android:transitionName="usernameTran"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                tools:targetApi="lollipop">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/regPassword"
+                android:hint="Password"
+                app:passwordToggleEnabled="true"
+                android:transitionName="passwordTran"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/regConfirmPassword"
+                android:hint="Confirm Password"
+                app:passwordToggleEnabled="true"
+                android:transitionName="passwordTran"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                tools:targetApi="lollipop">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/regBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@color/gray"
+                android:onClick="Signup"
+                android:text="signup"
+                android:textColor="@color/white"
+                android:transitionName="loginBtnTran"
+                tools:targetApi="lollipop" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:text="already have an account login"
+                android:layout_gravity="right"
+                android:elevation="0dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/antic"
+                android:textColor="@color/gray"
+                android:transitionName="signBtnTran"
+                android:onClick="BackToLogin"
+                tools:targetApi="lollipop"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "314443213131",
+    "project_id": "pick-parking",
+    "storage_bucket": "pick-parking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314443213131:android:346eb0a0854608697b20ce",
+        "android_client_info": {
+          "package_name": "com.hs.pickparking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314443213131-lb8u9ht5hriqjgrlimd1bejaev9j6p7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLRsCVEMjs4d80CCJA7zNpGc-m2WtzgKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314443213131-lb8u9ht5hriqjgrlimd1bejaev9j6p7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

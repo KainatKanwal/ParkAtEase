@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.OPTCodeScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@mipmap/ic_launcher_foreground"
+            android:contentDescription="@string/image" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="CO\nDE"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_100ssp"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="VERIFICATION"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:layout_marginTop="-30dp"
+            android:textSize="@dimen/_30ssp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/antic"
+            android:gravity="center_horizontal"
+            android:text="Enter verification otp code"
+            android:textAlignment="center"
+            android:textColor="@color/gray" />
+        <TextView
+            android:id="@+id/textNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+        <com.chaos.view.PinView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemCount="6"
+            app:itemWidth="@dimen/_40sdp"
+            app:itemHeight="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_30sdp"
+            app:lineColor="@color/yellow"
+            app:lineWidth="@dimen/_1sdp"
+            android:itemBackground="@color/white"
+            style="@style/PinWidget.PinView"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:cursorColor="@color/gray"
+            app:hideLineWhenFilled="true"
+            app:itemRadius="@dimen/_5sdp"
+            android:id="@+id/optCode">
+
+        </com.chaos.view.PinView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/verifyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:textColor="@color/white"
+            android:onClick="Verify"
+            android:text="Verify"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/resendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:text="resend code"
+            android:padding="@dimen/_10sdp"
+            android:layout_gravity="right"
+            android:elevation="0dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:fontFamily="@font/antic"
+            android:textColor="@color/gray"
+            android:transitionName="signBtnTran"
+            tools:targetApi="lollipop"
+            android:onClick="Resend"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
+</ScrollView>
